@@ -1,3 +1,27 @@
+<!-- ffxiv-tc-port 繁體中文說明開始 -->
+# ImPlot(台服 fork)
+
+Dear ImGui 的即時繪圖（折線圖、長條圖等）擴充（上游 [goatcorp/gc-implot](https://github.com/goatcorp/gc-implot) 的 `modified` 分支，再往上是 [epezent/implot](https://github.com/epezent/implot)）。由 cimplot 編進 Dalamud 本體的 `cimplot.dll`。
+
+## 台服 fork 的目的
+
+- 讓 cimplot 的子模組網址指向本 org，建置不依賴上游 repo 是否還在、有沒有被改寫。
+
+## 與上游的差異
+
+- 移除上游的 `build.yml` 工作流程（每次 push／PR 都會觸發的多平台建置）。原始碼與上游相同。
+- [gc-cimplot](https://github.com/ffxiv-tc-port/gc-cimplot) 釘的是本分支較早的版本（ImPlot 0.14），分支頂端是之後合入的上游版本，沒有採用。
+
+## 誰在用它
+
+- [gc-cimplot](https://github.com/ffxiv-tc-port/gc-cimplot)：子模組 `implot`。
+- 經由 gc-cimplot 間接使用：[Dalamud](https://github.com/ffxiv-tc-port/Dalamud)（`lib/cimplot/implot`）。
+
+---
+
+以下為上游原始 README，內容未經修改：
+
+<!-- ffxiv-tc-port 繁體中文說明結束 -->
 # ImPlot
 ImPlot is an immediate mode, GPU accelerated plotting library for [Dear ImGui](https://github.com/ocornut/imgui). It aims to provide a first-class API that ImGui fans will love. ImPlot is well suited for visualizing program data in real-time or creating interactive plots, and requires minimal code to integrate. Just like ImGui, it does not burden the end user with GUI state management, avoids STL containers and C++ headers, and has no external dependencies except for ImGui itself.
 
